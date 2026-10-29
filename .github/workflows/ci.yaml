@@ -20,5 +20,10 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
+      - name: Start server
+        run: |
+          node src/app.js &
+          npx wait-on http://localhost:3000/
+
       - name: Run Jest
         run: npm test

@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
   res.sendFile('views/index.html', { root: __dirname })
 })
 
+app.get('/index', (req, res) => {
+  res.sendFile('views/index.html', { root: __dirname })
+})
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`)
 })
